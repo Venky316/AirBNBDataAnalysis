@@ -9,7 +9,7 @@ import plotly.express as px
 st.title('Price Analysis')
 st.write('This page shows the price variations based of properties based on various factors such as location, type of property and so on.')
 
-with open('sample_airbnb.json','r') as f:
+with open('AirBNBDataAnalysis/sample_airbnb.json','r') as f:
     getfile = json.load(f)
 
 getdf = pd.DataFrame(getfile)
