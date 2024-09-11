@@ -9,5 +9,5 @@ st.write('This app intends to extract the property data from the Air BNB sample 
 st.markdown(' ')
 st.markdown(' ')
 st.markdown(' ')
-img = Image.open('AirBNBDataAnalysis/ImageBanner.jpg')
+img = Image.open('ImageBanner.jpg')
 st.image(img)
