@@ -10,7 +10,7 @@ import urllib.request
 st.title('Explore Properties')
 st.write('This page allows you to explore various properties that are available in the database and their features, prices & reviews.')
 
-with open('AirBNBDataAnalysis/sample_airbnb.json') as f:
+with open('sample_airbnb.json') as f:
     getfile = json.load(f)
 
 getdf = pd.DataFrame(getfile)
@@ -53,7 +53,7 @@ if(disprows):
                     img = Image.open('propimg.jpg')
                     st.image(img)
                 except:
-                    img = Image.open('AirBNBDataAnalysis/blank.jpg')
+                    img = Image.open('blank.jpg')
                     st.image(img)
                 renovon = datetime.strptime(filtdf.loc[i,'last_scraped'],'%Y-%m-%d %H:%M:%S')
                 getrenovon = datetime.strftime(renovon,'%d %B %Y')
@@ -139,7 +139,7 @@ if(disprows):
                 img = Image.open('propimg.jpg')
                 st.image(img)
             except:
-                img = Image.open('AirBNBDataAnalysis/blanksmall.jpg')
+                img = Image.open('blanksmall.jpg')
                 st.image(img)
         with col8:
             concatstr = '<b><font size = "5">:adult: ' + filtdf.loc[i,'host']['host_name']
